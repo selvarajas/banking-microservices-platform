@@ -51,6 +51,14 @@ erDiagram
         timestamp started_at
         timestamp completed_at
     }
-    
+    POC_TRANSFER_STEPS {
+        bigint id PK
+        varchar transfer_reference FK
+        varchar step_name "ValidationStep,DebitStep,CreditStep"
+        varchar status "PENDING,EXECUTING,COMPLETED,FAILED"
+        varchar details
+        timestamp started_at
+        timestamp completed_at
+    }
     note "Database: banking_accounts"
     note "Database: banking_transfers"
