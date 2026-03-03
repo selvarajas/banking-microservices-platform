@@ -11,9 +11,11 @@ graph TB
         Eureka[Eureka Server<br/>Port: 8761<br/>Service Registry]
     end
     
-    subgraph "Microservices"
+    subgraph "Define your Microservices"
         Account[Account Service<br/>Port: 8081<br/>Account Management]
         Transfer[Transfer Service<br/>Port: 8082<br/>Money Transfers<br/>SAGA Orchestrator]
+        E-MailNotification[E-Mail Notification Service<br/>Port: 8083<br/>Notification Management]
+        SMS[SMS Notification Service<br/>Port: 8084<br/>Notification Management]
     end
     
     subgraph "Data Layer"
@@ -46,6 +48,8 @@ graph TB
     style Gateway fill:#4CAF50,stroke:#2E7D32,color:#fff
     style Eureka fill:#2196F3,stroke:#1565C0,color:#fff
     style Account fill:#FF9800,stroke:#E65100,color:#fff
+ style E-MailNotification fill:#FF9800,stroke:#E65100,color:#fff
+ style SMS fill:#FF9800,stroke:#E65100,color:#fff
     style Transfer fill:#FF9800,stroke:#E65100,color:#fff
     style AccountDB fill:#9C27B0,stroke:#6A1B9A,color:#fff
     style TransferDB fill:#9C27B0,stroke:#6A1B9A,color:#fff
